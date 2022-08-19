@@ -29,13 +29,22 @@
       <section class="card">
         <div class="colored-background"></div>
         <div class="card-front">
-          <img src="./images/card-logo.svg" alt="card-logo" class="logo" />
-          <span class="card-viz-number">0000 0000 0000 0000</span>
-          <span class="upp card-viz-name">Jane Appleseed</span>
-          <span class="card-viz-cvc"> 00/00</span>
+          <div class="card-front__infos">
+            <img
+              src="./images/card-logo.svg"
+              alt="card-logo"
+              class="logo"
+              width="75"
+            />
+            <span class="card-viz-number">0000 0000 0000 0000</span>
+            <div class="infos__last">
+              <span class="upp card-viz-name">Jane Appleseed</span>
+              <span class="card-viz-cvc"> 00/00</span>
+            </div>
+          </div>
         </div>
         <div class="card-back">000</div>
-        <div class="customer-form">
+        <div class="form-container">
           <form action="#" method="POST">
             <label for="name" class="upp">Cardholder Name</label>
             <input type="text" id="name" placeholder="e.g. Jane Appleseed" />

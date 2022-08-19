@@ -44,19 +44,15 @@ main {
 }
 
 section.card {
-  min-height: calc(100vh - 40px);
-  width: 1440px;
-  max-width: 1440px;
+  min-height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 1fr;
-  background-color: aqua;
 }
 
 .colored-background {
-  grid-column: 1/2;
-  background: url(./images/bg-main-desktop.png) center no-repeat;
-  height: 100%;
+  background: url(./images/bg-main-desktop.png) center / cover no-repeat;
 }
 
 .card-front,
@@ -65,35 +61,49 @@ section.card {
   position: absolute;
   border-radius: 10px;
   width: 400px;
-  height: 220px;
+  height: 210px;
+  box-shadow: 3px 10px 25px 8px rgba(0, 0, 0, 0.15);
 }
 
 .card-front {
-  top: 100px;
-  background: url(./images/bg-card-front.png) center no-repeat;
+  top: 150px;
+  left: 200px;
+  background: url(./images/bg-card-front.png) center / cover no-repeat;
+}
+
+.card-front__infos {
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-front__infos span {
+  display: block;
+}
+
+.infos__last {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-back {
-  top: 400px;
-  background: url(./images/bg-card-back.png) center no-repeat;
+  top: 390px;
+  left: 260px;
+  background: url(./images/bg-card-back.png) center / cover no-repeat;
 }
 
-.customer-form {
+.form-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  justify-content: flex-end;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 440px;
+  max-width: 420px;
+  margin-right: 20rem;
 }
 
 label {
@@ -105,6 +115,12 @@ label {
 input {
   min-height: 30px;
   margin: 1rem 0 2rem 0;
+  border: 1px solid var(--light-grayish-violet);
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
 }
 
 .row {
